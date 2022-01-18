@@ -118,7 +118,7 @@ def bot_help(update, context):
 /{BotCommands.SpeedCommand}: Check Internet Speed of the Host
 /{BotCommands.ShellCommand}: Run commands in Shell (Terminal)
 /{BotCommands.ExecHelpCommand}: Get help for Executor module (Only Owner)
-/{BotCommands.TsHelpCommand}: Get help for Torrent search module
+/{BotCommands.GDTOTCommand}: Send GDTOT link along with command
 '''
 
     help_string = f'''
@@ -136,7 +136,7 @@ def bot_help(update, context):
 /{BotCommands.StatusCommand}: Shows a status of all the downloads
 /{BotCommands.StatsCommand}: Show Stats of the machine the bot is hosted on
 /{BotCommands.PingCommand}: Check how long it takes to Ping the Bot
-/{BotCommands.TsHelpCommand}: Get help for Torrent search module
+/{BotCommands.GDTOTCommand}: Send GDTOT link along with command
 '''
 
     if CustomFilters.sudo_user(update) or CustomFilters.owner_filter(update):
@@ -164,7 +164,7 @@ botcmds = [
         (f'{BotCommands.PingCommand}','Ping the Bot'),
         (f'{BotCommands.RestartCommand}','Restart the bot [owner/sudo only]'),
         (f'{BotCommands.LogCommand}','Get the Bot Log [owner/sudo only]'),
-        (f'{BotCommands.TsHelpCommand}','Get help for Torrent search module')
+        (f'{BotCommands.GDTOTCommand}: Send GDTOT link along with command')
     ]
 
 
