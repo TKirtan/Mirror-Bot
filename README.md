@@ -7,7 +7,7 @@ Give Star & Fork this repo, then upload **token.pickle** & **credentials.json** 
 
 
 after this click on the below button 👇👇👇👇
-<p><a href="https://github.com/tekeayush/Mirror-bot/blob/master/heroku-guide.md"> <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" /></a></p> 
+<p><a href="https://github.com/TKirtan/Mirror-bot/blob/master/heroku-guide.md"> <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" /></a></p> 
 
 
 ## Features supported:
