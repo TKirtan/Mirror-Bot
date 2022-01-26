@@ -226,6 +226,7 @@ where host is the name of extractor (eg. youtube, twitch). Multiple accounts of 
 ## Credits
 
 Thanks to:
+- [Ayush Teke](https://github.com/tekeayush) For Editted Repo
 - [out386](https://github.com/out386) heavily inspired from telegram bot which is written in JS
 - [Izzy12](https://github.com/lzzy12/) for original repo
 - [Dank-del](https://github.com/Dank-del/) for base repo
