@@ -51,11 +51,11 @@ async def return_search(query, page=1, sukebei=False):
                 if splitted.scheme == 'magnet' and splitted.query:
                     link = f'<code>{link}</code>'
                 newtext = f'''<b>{a + 1}.</b> <code>{html.escape(i["title"])}</code>
-<b>Link:</b> <code>{link}</code>
-<b>Size:</b> <code>{i["nyaa_size"]}</code>
-<b>Seeders:</b> <code>{i["nyaa_seeders"]}</code>
-<b>Leechers:</b> <code>{i["nyaa_leechers"]}</code>
-<b>Category:</b> <code>{i["nyaa_category"]}</code>\n\n'''
+<b>**Link :**</b> <code>{link}</code>
+<b>**Size :**</b> <code>{i["nyaa_size"]}</code>
+<b>**Seeders:**</b> <code>{i["nyaa_seeders"]}</code>
+<b>**Leechers :**</b> <code>{i["nyaa_leechers"]}</code>
+<b>**Category :**</b> <code>{i["nyaa_category"]}</code>\n\n'''
                 futtext = text + newtext
                 if (a and not a % 10) or len((await parser.parse(futtext))['message']) > 4096:
                     results.append(text)
@@ -259,48 +259,48 @@ class TorrentSearch:
         await self.update_message()
 
 RESULT_STR_1337 = (
-    "➲Name: `{Name}`\n"
-    "➲Size: {Size}\n"
-    "➲Seeders: {Seeders} || ➲Leechers: {Leechers}"
+    "**Name :** `{Name}`\n"
+    "**Size :** {Size}\n"
+    "**Seeders :** {Seeders} || **Leechers :** {Leechers}"
 )
 RESULT_STR_PIRATEBAY = (
-    "➲Name: `{Name}`\n"
-    "➲Size: {Size}\n"
-    "➲Seeders: {Seeders} || ➲Leechers: {Leechers}"
+    "**Name :** `{Name}`\n"
+    "**Size :** {Size}\n"
+    "**Seeders :** {Seeders} || **Leechers :** {Leechers}"
 )
 RESULT_STR_TGX = (
-    "➲Name: `{Name}`\n" 
-    "➲Size: {Size}\n"
-    "➲Seeders: {Seeders} || ➲Leechers: {Leechers}"
+    "**Name :** `{Name}`\n" 
+    "**Size :** {Size}\n"
+    "**Seeders :** {Seeders} || **Leechers :** {Leechers}"
 )
 RESULT_STR_YTS = (
-    "➲Name: `{Name}`\n"
-    "➲Released on: {ReleasedDate}\n"
-    "➲Genre: {Genre}\n"
-    "➲Rating: {Rating}\n"
-    "➲Likes: {Likes}\n"
-    "➲Duration: {Runtime}\n"
-    "➲Language: {Language}"
+    "**Name :** `{Name}`\n"
+    "**Released on :** {ReleasedDate}\n"
+    "**Genre :** {Genre}\n"
+    "**Rating :** {Rating}\n"
+    "**Likes :** {Likes}\n"
+    "**Duration :** {Runtime}\n"
+    "**Language :** {Language}"
 )
 RESULT_STR_EZTV = (
-    "➲Name: `{Name}`\n"
-    "➲Size: {Size}\n"
-    "➲Seeders: {Seeders}"
+    "**Name :** `{Name}`\n"
+    "**Size :** {Size}\n"
+    "**Seeders :** {Seeders}"
 )
 RESULT_STR_TORLOCK = (
-    "➲Name: `{Name}`\n"
-    "➲Size: {Size}\n"
-    "➲Seeders: {Seeders} || ➲Leechers: {Leechers}"
+    "**Name :** `{Name}`\n"
+    "**Size :** {Size}\n"
+    "**Seeders :** {Seeders} || **Leechers :** {Leechers}"
 )
 RESULT_STR_RARBG = (
-    "➲Name: `{Name}`\n"
-    "➲Size: {Size}\n"
-    "➲Seeders: {Seeders} || ➲Leechers: {Leechers}"
+    "**Name :** `{Name}`\n"
+    "**Size :** {Size}\n"
+    "**Seeders :** {Seeders} || **Leechers :** {Leechers}"
 )
 RESULT_STR_ALL = (
-    "➲Name: `{Name}`\n"
-    "➲Size: {Size}\n"
-    "➲Seeders: {Seeders} || ➲Leechers: {Leechers}"
+    "**Name :** `{Name}`\n"
+    "**Size :** {Size}\n"
+    "**Seeders :** {Seeders} || **Leechers :** {Leechers}"
 )
 
 torrents_dict = {

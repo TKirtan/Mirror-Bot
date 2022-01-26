@@ -31,19 +31,19 @@ def stats(update, context):
     cpuUsage = psutil.cpu_percent(interval=0.5)
     memory = psutil.virtual_memory().percent
     disk = psutil.disk_usage('/').percent
-    stats = f'<b>╭──「⭕️ BOT STATISTICS ⭕️」</b>\n' \
+    stats = f'<b>╭──「 **BOT STATISTICS**」</b>\n' \
             f'<b>│</b>\n' \
-            f'<b>├  ⏰ Bot Uptime : {currentTime}</b>\n' \
-            f'<b>├  💾 Total Disk Space : {total}</b>\n' \
-            f'<b>├  📀 Total Used Space : {used}</b>\n' \
-            f'<b>├  💿 Total Free Space : {free}</b>\n' \
-            f'<b>├  🔼 Total Upload : {sent}</b>\n' \
-            f'<b>├  🔽 Total Download : {recv}</b>\n' \
-            f'<b>├  🖥️ CPU : {cpuUsage}%</b>\n' \
-            f'<b>├  🎮 RAM : {memory}%</b>\n' \
-            f'<b>├  💽 DISK : {disk}%</b>\n' \
+            f'<b>├   **Bot Uptime :** {currentTime}</b>\n' \
+            f'<b>├   **Total Disk Space :** {total}</b>\n' \
+            f'<b>├   **Total Used Space :** {used}</b>\n' \
+            f'<b>├   **Total Free Space :** {free}</b>\n' \
+            f'<b>├   **Total Upload :** {sent}</b>\n' \
+            f'<b>├   **Total Download :** {recv}</b>\n' \
+            f'<b>├   **CPU :** {cpuUsage}%</b>\n' \
+            f'<b>├   **RAM :** {memory}%</b>\n' \
+            f'<b>├   **DISK :** {disk}%</b>\n' \
             f'<b>│</b>\n' \
-            f'<b>╰──「 🚸 @AT_BOTs 🚸 」</b>'
+            f'<b>╰──「 __Akshay Rathore__ 」</b>'
     update.effective_message.reply_photo(IMAGE_URL, stats, parse_mode=ParseMode.HTML)
 
 
@@ -53,14 +53,14 @@ This bot can mirror all your links to Google Drive!
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
     buttons = button_build.ButtonMaker()
-    buttons.buildbutton("Repo", "https://github.com/ayushteke/slam_aria_mirror_bot")
-    buttons.buildbutton("Channel", "https://t.me/AT_BOTs")
+    buttons.buildbutton("Repo", "https://google.com")
+    buttons.buildbutton("Owner", "https://telegram.me/akshayarq")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     LOGGER.info('UID: {} - UN: {} - MSG: {}'.format(update.message.chat.id, update.message.chat.username, update.message.text))
     uptime = get_readable_time((time.time() - botStartTime))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         if update.message.chat.type == "private" :
-            sendMessage(f"Hey I'm Alive 🙂\nSince: <code>{uptime}</code>", context.bot, update)
+            sendMessage(f"Hey I'm Alive \nSince: <code>{uptime}</code>", context.bot, update)
         else :
             sendMarkup(IMAGE_URL, start_string, context.bot, update, reply_markup)
     else :

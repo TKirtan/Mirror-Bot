@@ -29,9 +29,9 @@ def gdtot(update, context):
         search = update.message.text.split(' ', 1)[1]
         search_list = search.split(' ')
         for glink in search_list:
-            LOGGER.info(f"Extracting gdtot link: {glink}")
+            LOGGER.info(f"**Extracting gdtot link :** {glink}")
             button = None
-            reply = sendMessage('Getting Your GDTOT File Wait....', context.bot, update)
+            reply = sendMessage('**Getting Your GDTOT File Wait....**', context.bot, update)
             file_name, file_url = GDTOT().parse(url=glink)
             if file_name == 404:
                 sendMessage(file_url, context.bot, update)
