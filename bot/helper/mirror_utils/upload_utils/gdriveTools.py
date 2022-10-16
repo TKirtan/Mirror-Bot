@@ -380,7 +380,7 @@ class GoogleDriveHelper:
                     return "your clone has been stopped and cloned data has been deleted!", "cancelled"
                 msg += f'<b>**Filename : **</b><code>{meta.get("name")}</code>\n<b>**Size :**</b><code>{get_readable_file_size(self.transferred_size)}</code>'
                 msg += f'\n<b>**Type : **</b><code>Folder</code>'
-                msg += f'\n<b>**Powerd by : Team SIC**</b>'
+                msg += f'\n<b>**Powered by : Team SIC**</b>'
                 buttons = button_build.ButtonMaker()
                 if SHORTENER is not None and SHORTENER_API is not None:
                     surl = requests.get(f'https://{SHORTENER}/api?api={SHORTENER_API}&url={durl}&format=text').text
@@ -417,7 +417,7 @@ class GoogleDriveHelper:
                     typeee = 'File' 
                 try:
                     msg += f'\n<b>**Size : **</b><code>{get_readable_file_size(int(meta.get("size")))}</code>'
-                    msg += f'\n<b>**Powerd by : Team SIC</b> '
+                    msg += f'\n<b>**Powered by : Team SIC</b> '
                 except TypeError:
                     pass
                 if INDEX_URL is not None:
@@ -606,7 +606,7 @@ class GoogleDriveHelper:
                     # Excluded index link as indexes cant download or open these shortcuts
                 else:
                     furl = f"https://drive.google.com/uc?id={file.get('id')}&export=download"
-                    msg += f"📄 <code>{file.get('name')}<br>({get_readable_file_size(int(file.get('size')))})</code><br>"
+                    msg += f"<code>{file.get('name')}<br>({get_readable_file_size(int(file.get('size')))})</code><br>"
                     if SHORTENER is not None and SHORTENER_API is not None:
                         sfurl = requests.get(f'https://{SHORTENER}/api?api={SHORTENER_API}&url={furl}&format=text').text
                         msg += f"<b><a href={sfurl}>Drive Link</a></b>"
@@ -653,7 +653,7 @@ class GoogleDriveHelper:
 
             msg = f"<b>Found <code>{len(response['files'])}</code> results for <code>{fileName}</code></b>"
             buttons = button_build.ButtonMaker()   
-            buttons.buildbutton("🔎 VIEW", f"https://telegra.ph/{self.path[0]}")
+            buttons.buildbutton(" VIEW", f"https://telegra.ph/{self.path[0]}")
 
             return msg, InlineKeyboardMarkup(buttons.build_menu(1))
 
