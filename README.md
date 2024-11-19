@@ -1,12 +1,7 @@
 
 # Mirror Bot
-This is a telegram bot writen in python for mirroring files on the internet to our beloved Google Drive.
+This is a telegram bot for mirroring files on the internet to our beloved Google Drive.
 
-## Deploying on Heroku
-Give Star & Fork this repo, then upload **token.pickle** & **credentials.json** to your forks
-
-
-after this click on the below button 👇👇👇👇
 <p><a href="https://github.com/TKirtan/Mirror-bot/blob/master/heroku-guide.md"> <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" /></a></p> 
 
 
